@@ -409,34 +409,12 @@ fn split_part(p: &Part) -> Vec<Tok> {
         .collect()
 }
 
-/// Approximate word and letter progression when the source only supplies line timing.
-/// This is visual interpolation, NOT measured sung-word timing; actual word timing wins.
+/// Auralis: if the provider gives only LINE timing, do not invent per-word timestamps.
+/// Light the whole original line together at its actual timestamp. Detailed
+/// word/letter karaoke is reserved for sources with measured word timings.
 fn line_synced_parts(l: &Line) -> Vec<Part> {
-    let mut chunks: Vec<(String, bool)> = Vec::new();
-    for c in l.text.chars() {
-        let ws = c.is_whitespace();
-        match chunks.last_mut() {
-            Some((s, w)) if *w == ws => s.push(c),
-            _ => chunks.push((c.to_string(), ws)),
-        }
-    }
-    let total: usize = chunks.iter().filter(|(_, space)| !*space)
-        .map(|(text, _)| text.chars().count().max(1)).sum();
-    if total == 0 { return vec![]; }
-    // Keep the line's highlight until the end instead of completing it in ~50ms/word.
-    let available = l.dur.max(150) as f64;
-    let mut at = 0usize;
-    chunks.into_iter().map(|(text, space)| {
-        let start = l.start + (available * at as f64 / total as f64).round() as i32;
-        if space {
-            Part { start, dur: 0, text, bg: false }
-        } else {
-            let count = text.chars().count().max(1);
-            at += count;
-            let end = l.start + (available * at as f64 / total as f64).round() as i32;
-            Part { start, dur: (end - start).max(1), text, bg: false }
-        }
-    }).collect()
+    if l.text.is_empty() { return Vec::new(); }
+    vec![Part { start: l.start, dur: 0, text: l.text.clone(), bg: false }]
 }
 
 /// Joining scripts (Arabic and friends) keep whole-word sweeps, as in the extension.
@@ -2616,14 +2594,16 @@ mod tests {
     }
 
     #[test]
-    fn line_synced_words_are_staggered() {
+    fn line_synced_words_are_not_artificially_staggered() {
         let l = Line { start: 2000, dur: 3000, text: "one two  three".into(), ..Default::default() };
         let p = line_synced_parts(&l);
-        let words: Vec<_> = p.iter().filter(|p| !p.text.trim().is_empty()).collect();
-        assert!(words[1].start > words[0].start);
-        assert!(words[2].start > words[1].start);
-        assert!(words[2].start > 2500);
-        assert!((words[2].start + words[2].dur - 5000).abs() <= 1);
+        assert_eq!(p.len(), 1);
+        assert_eq!(p[0].start, 2000);
+        assert_eq!(p[0].dur, 0);
+        assert_eq!(p[0].text, l.text);
+        let words: Vec<_> = p.iter().flat_map(split_part).filter(|t| !t.space).collect();
+        assert_eq!(words.len(), 3);
+        assert!(words.iter().all(|w| w.start == 2.0 && w.dur == 0.0));
     }
 
     #[test]

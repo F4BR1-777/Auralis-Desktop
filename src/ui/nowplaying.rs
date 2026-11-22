@@ -739,6 +739,8 @@ pub(super) fn lyrics_panel(app: &mut App, ui: &mut Ui, rect: Rect, now: f64, cen
             ui.label(egui::RichText::new("No lyrics available").font(theme::semibold(20.0)).color(theme::text_dim()));
             ui.add_space(6.0);
             ui.label(egui::RichText::new("None of the lyric providers has this song.").font(theme::regular(14.0)).color(theme::text_faint()));
+            ui.add_space(10.0);
+            ui.hyperlink_to("Buscar en Letras.com (sitio externo)", "https://www.letras.com/");
         });
     }
     app.lyrics = Some((id, set));
@@ -976,6 +978,9 @@ fn lyric_options(app: &mut App, ui: &mut Ui) {
         }
     }
     menu_divider(ui);
+    // The third-party website is an external reference only, NOT a lyric provider.
+    // Its contents are not scraped, copied, cached or redistributed by Auralis.
+    ui.hyperlink_to("Consultar Letras.com (navegador)", "https://www.letras.com/");
     let tip = format!("Translation · {}", lang_name(&app.lyric_prefs.target));
     switch_row(ui, &tip, &mut app.show_trans);
     switch_row(ui, "Romanization", &mut app.show_roman);
