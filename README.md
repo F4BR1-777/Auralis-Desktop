@@ -1,112 +1,97 @@
 <div align="center">
-  <h1>BitChord PC - Official</h1>
-  <p><strong>A fast, native YouTube Music desktop app — rebuilt in Rust.</strong></p>
-  <p>Built with egui and rodio. No Electron, no embedded browser player, and light on memory while playing.</p>
 
-  <p>
-    <a href="https://github.com/jackychan4891/BitChord-PC-Continued/releases/latest"><img src="https://img.shields.io/github/v/release/jackychan4891/BitChord-PC-Continued?style=flat-square&color=a855f7&labelColor=0d1117" alt="Latest release"></a>
-    <a href="https://github.com/jackychan4891/BitChord-PC-Continued/releases"><img src="https://img.shields.io/github/downloads/jackychan4891/BitChord-PC-Continued/total?style=flat-square&color=a855f7&labelColor=0d1117" alt="Downloads"></a>
-    <img src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-333?style=flat-square&labelColor=0d1117" alt="Platforms">
-    <a href="LICENSE"><img src="https://img.shields.io/github/license/jackychan4891/BitChord-PC-Continued?style=flat-square&color=333&labelColor=0d1117" alt="License: GPL-3.0"></a>
-  </p>
+# 🎵 Auralis Desktop
 
-  <p>
-    <a href="https://github.com/jackychan4891/BitChord-PC-Continued/releases/latest">Download</a> ·
-    <a href="#features">Features</a> ·
-    <a href="#installation">Installation</a>
-  </p>
+### Feel Every Note.
+
+**Un reproductor musical moderno y nativo para Windows.**
+
+Escucha, descubre y organiza tu música con una interfaz elegante, letras sincronizadas y una experiencia de reproducción inmersiva.
+
+[**Descargar Auralis**](https://github.com/F4BR1-777/Auralis-Desktop/releases) · [Características](#-características) · [Instalación](#-instalación) · [Compilar](#-compilar-desde-el-código-fuente)
+
+![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D4?style=flat-square)
+![Rust](https://img.shields.io/badge/Rust-Native-CE422B?style=flat-square)
+![License](https://img.shields.io/badge/License-GPL--3.0-blue?style=flat-square)
+
 </div>
 
-> [!IMPORTANT]
-> BitChord is not affiliated with, endorsed by, or connected to YouTube, Google or Apple.
-> Use it at your own discretion.
+---
 
-> [!TIP]
-> Need help, want to hear about new releases first, or say what should come next?
-> [Join the Discord server](https://discord.gg/cWQSGjpXM).
-## Screenshots
+## ✨ Características
 
-<table>
-  <tr>
-    <td width="50%"><img src="docs/readme/screenshot-1.png" alt="Full player with artwork, lyrics and controls"></td>
-    <td width="50%"><img src="docs/readme/screenshot-2.png" alt="Browse view with shelves and playback controls"></td>
-  </tr>
-  <tr>
-    <td align="center"><b>Player</b> — artwork, lyrics, queue and playback in one view</td>
-    <td align="center"><b>Browse</b> — your music, shelves and navigation</td>
-  </tr>
-  <tr>
-    <td colspan="2"><img src="docs/readme/screenshot-3.png" alt="BitChord interface and playback" width="100%"></td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center"><b>Desktop experience</b> — native UI, fast playback, and quality controls</td>
-  </tr>
-</table>
+### 🎧 Reproducción musical
 
-## Features
+- Buscar canciones, artistas, álbumes y playlists mediante YouTube Music.
+- Reproductor integrado con cola de reproducción, aleatorio, repetición y control de volumen.
+- Biblioteca, favoritos, historial y listas de reproducción.
+- Modo de reproducción inmersivo con carátula y controles dedicados.
 
-**Playback**
-- **YouTube Music, natively** — search, browse, albums, playlists, artist pages, radio, mixes, charts and your library.
-- **Lossless / Hi-Res Lossless / Dolby Atmos** — play higher-quality copies from configured hi-res addon sources when a matching copy is available, with YouTube audio as the fallback.
-- **Quality controls in the player** — see the active audio quality, prefer Dolby Atmos when available, and revert or upgrade quality from the player menu.
-- **Automix and crossfade** — DJ-style transitions between songs, with a mixing state shown in the player during transitions.
-- **Queue and playback controls** — shuffle, repeat, autoplay, song radio, next-track prefetch, volume normalization, and output device selection.
-- **Downloads** — save songs for offline playback.
+### 🎤 Smart Karaoke
 
-**Lyrics and interface**
-- **Synced lyrics** — timed lyrics with provider fallbacks, timing controls, romanization and translation options.
-- **Native Rust desktop UI** — a fast egui/rodio interface with system media controls, tray integration, and keyboard-friendly navigation.
-- **Discord Rich Presence** — show what you’re listening to on Discord.
-- **Last.fm scrobbling** — connect your Last.fm account in Settings.
+- Letras sincronizadas por línea y, cuando la fuente lo permite, por palabra.
+- Iluminación progresiva durante la reproducción.
+- Diseño con letras destacadas, desenfoque suave en líneas no activas y márgenes interiores.
+- Tamaño de letra predeterminado equivalente al 140 % del diseño anterior.
+- Respeto por el texto original de la fuente: sin añadir paréntesis ni reescribir automáticamente las frases.
+- Ajustes de tiempo para compensar desfases de sincronización.
 
-**Accounts and library**
-- **Google sign-in** — unlock your YouTube Music feed, likes, playlists, history and recommendations.
-- **Library and uploads** — access saved music and uploaded tracks where available.
-- **Listen Together / jams** — start or join a shared listening session.
-- **Spotify transfer** — bring playlists and liked music over from Spotify.
+> La precisión depende de los datos disponibles para cada canción. No todas las pistas cuentan con sincronización por palabra.
 
-## Installation
+### ✨ Interfaz y personalización
 
-Download the latest build from [Releases](https://github.com/jackychan4891/BitChord-PC-Continued/releases/latest).
+- Interfaz nativa desarrollada en Rust.
+- Diseño visual de estilo **Liquid Glass**, con fondos dinámicos y paneles translúcidos.
+- Navegación por Inicio, Buscar, Descubrir, Biblioteca, Favoritos, Historial e Insights.
+- Controles de reproducción y experiencia optimizados para escritorio.
 
-- **Windows** — download the Windows release asset, extract/install it, and run `bitchord.exe`.
-- **macOS / Linux** — use the platform release assets when available.
+### 🔎 Descubrir e Insights
 
-If Windows SmartScreen appears for an unsigned build, choose **More info → Run anyway**.
+- Secciones para explorar lanzamientos y música relacionada.
+- Recomendaciones basadas en las canciones escuchadas y preferencias guardadas localmente, cuando la personalización está habilitada.
+- Visualización de información y estadísticas de escucha en **Auralis Insights**.
 
-## Building from source
+> Las recomendaciones dependen de la disponibilidad de los servicios musicales y no implican un modelo de IA generativa entrenado con tu biblioteca.
 
-You need the [Rust toolchain](https://rustup.rs/).
+## 💻 Instalación
 
-```sh
-git clone https://github.com/jackychan4891/BitChord-PC-Continued.git
-cd BitChord-PC-Continued
-cargo build --release
+1. Abre la sección [**Releases**](https://github.com/F4BR1-777/Auralis-Desktop/releases).
+2. Descarga el instalador más reciente para Windows, por ejemplo `Auralis-Setup-3.1.0.exe`.
+3. Ejecuta el instalador y sigue los pasos.
+4. Abre **Auralis** desde el acceso directo del escritorio o desde el menú Inicio.
+
+**Requisitos:** Windows de 64 bits y las dependencias del sistema necesarias para la aplicación. El instalador puede no estar firmado digitalmente.
+
+## 🛠️ Tecnologías
+
+- **Rust** — aplicación nativa.
+- **egui** — interfaz gráfica.
+- **rodio** — reproducción de audio.
+- **YouTube Music** — búsqueda y catálogo mediante integraciones no oficiales.
+- **Inno Setup** — instalador para Windows.
+
+## 🧑‍💻 Compilar desde el código fuente
+
+Instala [Rust](https://rustup.rs/) y las herramientas de compilación de C++ para Windows. Luego ejecuta:
+
+```powershell
+git clone https://github.com/F4BR1-777/Auralis-Desktop.git
+cd Auralis-Desktop
+cargo build --release --locked --target x86_64-pc-windows-msvc
 ```
 
-The built app will be in `target/release/`.
+La compilación se genera en `target/x86_64-pc-windows-msvc/release/`.
 
-Platform builds may require native dependencies (audio/system libraries and toolchain components used by sign-in or platform integrations). Check the repository’s platform docs and release workflow for the exact prerequisites.
+**Nota:** para distribuir una compilación funcional pueden ser necesarios archivos auxiliares y dependencias de Windows. Verifica también las licencias de los recursos incluidos.
 
-## Notes
+## 📌 Estado del proyecto
 
-- Audio and the main interface are native (Rust + egui + rodio). Sign-in and some web flows may open a system webview window.
-- Hi-res/Lossless/Atmos playback depends on configured addon sources and whether a matching, playable copy exists for the selected track.
-- BitChord does not bypass subscriptions, DRM, or regional restrictions. Availability depends on the services and sources you use.
-- Third-party services (YouTube Music, lyrics providers, Discord, Last.fm, Spotify, addon sources) can change behavior over time.
+Auralis es un proyecto en desarrollo. Las funciones y su disponibilidad pueden cambiar entre versiones. Consulta [Releases](https://github.com/F4BR1-777/Auralis-Desktop/releases) para descargar versiones publicadas.
 
-## Contributing
+## ⚖️ Licencia y atribuciones
 
-Bug reports and pull requests are welcome. Please open an issue with clear reproduction steps, platform details, and relevant logs (with secrets/tokens removed).
+Auralis es una modificación de software de código abierto derivado de **[BitChord PC — Continued](https://github.com/jackychan4891/BitChord-PC-Continued)**. Se conservan las atribuciones y avisos de copyright correspondientes al proyecto original y sus dependencias.
 
-## License
+Este repositorio se distribuye bajo la licencia **[GNU GPL-3.0](LICENSE)**. Consulta el archivo de licencia y los avisos de terceros para conocer las condiciones aplicables.
 
-BitChord is licensed under [GPL-3.0](LICENSE).
-
-## Acknowledgements
-
-- [egui](https://github.com/emilk/egui) for the interface.
-- [rodio](https://github.com/RustAudio/rodio) and Symphonia for audio playback and decoding.
-- [ytm-rs](https://github.com/grapedjuice/ytm-rs) for the basic rust backend.
-- Lyrics, metadata, playback, and integrations depend on the upstream libraries and third-party services used by this project.
-
+Auralis **no está afiliado, patrocinado ni respaldado por YouTube, Google, Apple o Spotify**. El funcionamiento de las integraciones depende de servicios externos y de sus condiciones de uso.

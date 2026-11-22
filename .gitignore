@@ -24,3 +24,5 @@ token*.json
 
 # Fuentes cuya redistribucion requiere autorizacion
 assets/fonts/SFProDisplay-*.otf
+
+assets/fonts/SFProDisplay-*.otf
