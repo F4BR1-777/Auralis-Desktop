@@ -18,6 +18,22 @@ Escucha, descubre y organiza tu música con una interfaz elegante, letras sincro
 
 ---
 
+## Capturas de pantalla
+
+### Inicio
+![Inicio de Auralis](docs/capturas/auralis-inicio.png)
+
+### Smart Karaoke
+![Letras sincronizadas de Auralis](docs/capturas/auralis-karaoke.png)
+
+### Descubrir
+![Descubrir en Auralis](docs/capturas/auralis-descubrir.png)
+
+### Auralis Insights
+![Estadísticas de Auralis](docs/capturas/auralis-insights.png)
+
+---
+
 ## ✨ Características
 
 ### 🎧 Reproducción musical
