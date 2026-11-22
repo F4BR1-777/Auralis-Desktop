@@ -1,0 +1,20 @@
+AURALIS DESKTOP - PROCEDENCIA Y CREDITOS
+
+Auralis es una aplicacion derivada del proyecto BitChord PC, recibida como
+BitChord-PC-Official-rust-2.0, version 2.0.1. Esta adaptacion incluye cambios
+de marca, interfaz, visualizacion y funciones adicionales en Rust.
+
+Proyecto de procedencia indicado en el codigo fuente:
+https://github.com/jackychan4891/BitChord-PC-Continued
+
+Licencia del codigo: GPL-3.0-only. Ver archivo LICENSE-GPL-3.0.txt.
+Los avisos, dependencias y licencias de terceros deben mantenerse.
+Al redistribuir el instalador se debe proporcionar el codigo fuente
+correspondiente y revisar la licencia de cada recurso incluido.
+
+Auralis no esta afiliado a Apple, Google ni YouTube Music.
+El acceso a servicios musicales externos depende de sus condiciones.
+La integracion de autenticacion original no es una API oficial.
+
+Este instalador se genera LOCALMENTE a partir del EXE que el usuario
+compilo en su computadora. No descarga un ejecutable desconocido.

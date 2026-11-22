@@ -1,0 +1,26 @@
+target/
+node_modules/
+.venv/
+.env
+.env.*
+*.exe
+*.msi
+*.zip
+*.log
+*.db
+*.sqlite
+*.sqlite3
+userdata/
+sessions/
+cache/
+
+# Archivos privados
+*.pem
+*.p12
+*.pfx
+cookies*.txt
+credentials*.json
+token*.json
+
+# Fuentes cuya redistribucion requiere autorizacion
+assets/fonts/SFProDisplay-*.otf
